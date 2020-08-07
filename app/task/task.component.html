@@ -1,0 +1,47 @@
+<div>
+    <h2> Expression </h2>
+    {{ 12+5-6 }}
+    <p>
+        Task ID: {{ tid }}
+    </p>
+    <p>
+        Task Name: {{ tname }}
+    </p>
+
+    <p>
+        Duration: {{ duration }}
+    </p>
+
+    <div>
+        <h3> Add TO DO</h3>
+        <p>
+            <input type="text" (input)="setId($event)" placeholder="enter tid" />
+        </p>
+        <p>
+            <input type="text"  (input)="setName($event)" placeholder="enter tname"/>
+        </p>
+        <p>
+            <input type="text"  (input)="setDate($event)" placeholder="enter date"/>
+        </p>
+        
+        <p>
+            <input type="text"  placeholder="enter starttime"/>
+        </p>
+        
+        <p>
+            <input type="text"  placeholder="enter duration"/>
+        </p>
+           <p>
+               <input type="button" (click)="addTask()"  value="Add Task"/>
+           </p>
+
+    </div>
+    <div>
+        <h3> To Do items  </h3>
+        <div *ngFor="let item of todods">
+                {{ item.tid }}     | {{ item.tname }}| {{item.dur}}
+                
+        </div>
+    </div>
+
+</div>

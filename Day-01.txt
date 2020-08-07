@@ -1,0 +1,87 @@
+Angular Environment  |  ES6
+===============================================
+Node 	- 12+	: webpack (interpreter,library,npm(node package manager), webserer)
+		: NodeJS : is backend ES6 based language / library 
+
+VSCode  	: editor 
+Angular\cli     : 
+
+	Install CLI
+		npm install -g @angular/cli
+	
+
+	Create New Project
+		ng new <projectname>
+			Note: if throw error execution policy is blocked 
+			      then run below command in powershell window 
+				>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+	Run project
+		cd <projectname>
+		ng serve
+		or
+		ng s
+	
+
+
+Project's Structure
+	e2e			: testing 
+	node_modules		: library 
+	src			: source code
+		app		: application level coding 
+			
+			
+			app.componet.css
+			app.component.html
+			app.component.ts	4. 		
+			app.compoent.spec.ts
+			app.module.ts		3.					
+		assets		: images, scripts, common styles, files 
+
+		index.html			1.
+		main.ts				2.
+		style.css
+
+	angular.json 
+	package.json
+	pacakge-lock.json
+
+
+	
+	
+<app-root></app-root>: is component 
+
+SPA		: single page application (angular works on SPA concept)
+Component	: every section/part of webpag can be considered as one component 
+		Component - structure
+			header.component.ts	(typescript)
+			header.component.html	(template)
+			header.component.css	(style)
+			header.component.spec.ts (test scrpt)
+
+		
+		
+Create Custom Component:
+	ng g c <compname>
+	ng generate component <copmname>
+		
+
+Interpolation
+	{{ }}
+
+Bind data from variable (ts) file:
+
+	{{varname}}
+
+Form Event:
+	template driven		
+				()		event binding 
+				[]		attribute binding 
+	model form
+				
+	reactive form
+	
+
+	
+
+
