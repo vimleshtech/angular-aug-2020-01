@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  name:string="Raman"
+
   constructor() { }
 
+  setName(){
+    this.name  ="test name"
+  }
   ngOnInit(): void {
   }
 

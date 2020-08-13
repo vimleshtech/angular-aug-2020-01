@@ -1,8 +1,21 @@
-<app-header></app-header>
+
 <div>
 <h1> First Angular Application !!!</h1>
 
 </div>
-<app-task></app-task>
-<app-footer></app-footer>
+<app-addproduct></app-addproduct>
+
+<div>
+    <h3> switch example </h3>
+    <div [ngSwitch]="choice">
+        <p *ngSwitchCase="'A'"> Apple </p>
+        <p *ngSwitchCase="'B'"> bbbb </p>
+        <p *ngSwitchCase="'C'"> cccc </p>
+        <p *ngSwitchCase="'D'"> ddd.. </p>
+        <p *ngSwitchCase="'E'"> El.. </p>
+        <p *ngSwitchDefault> Other </p>
+    </div>
+</div>
+<!-- <app-task></app-task>
+<app-footer></app-footer> -->
 

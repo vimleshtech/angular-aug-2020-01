@@ -1,1 +1,14 @@
-<p>header works!</p>
+<div>
+    <h1>ngModel</h1>
+    
+    <p>
+        <input [(ngModel)]="name" #ctrlName="ngModel" required >
+    </p>
+        <p> Value: {{name }}</p>
+        <p>
+            Validation : {{ctrlName.valid}}
+        </p>
+        <button (click)="setName()">Set Name</button>
+
+    
+</div>

@@ -1,0 +1,61 @@
+<div >
+    <h2> Add Product </h2>
+
+        <button (click)="toggle()">toggle</button>
+
+    <div *ngIf="isadmin">
+
+                
+                <h3 [innerHTML]="msg" ></h3>
+                <input type="text" [value]="msg" />
+                <img [src]="path" />
+
+
+            </div>
+
+            <!-- ng if else   -->
+            <div *ngIf="isadmin; else guest">
+                    Hello Admin 
+            </div>
+            <ng-template #guest>
+                        other user 
+            </ng-template>
+            
+            <!-- ng if else with template  -->
+            <ng-container *ngIf="isadmin; then admin; else user"></ng-container>
+
+            <ng-template #admin>
+
+                        Admin Section 
+                            
+            </ng-template>
+            <ng-template #user>
+                    User Section 
+            </ng-template>
+            
+
+    <p>
+        <input  placeholder="enter pid" class="form-control"  [(ngModel)]="pid" >
+    </p>
+    <p>
+        <input placeholder="enter pname" class="form-control" [(ngModel)]="pname">
+    </p>
+    <p>
+        <input placeholder="enter pprice" class="form-control" [(ngModel)]="pprice">
+    </p>
+    <p>
+        <button (click)="createProduct()" class="btn btn-primary"> Add Product </button>
+        <button  class="btn btn-primary"> Update Product </button>
+
+    </p>
+    <h3>
+         Product Details 
+    </h3>
+    <div *ngFor="let prod of products;let i=index">
+
+            {{prod.pid}} {{ prod.pname }} {{prod.price}}
+            <button>Edit</button> <button (click)="delRow(i)">Del</button>
+
+    </div>
+    
+</div>
