@@ -51,10 +51,14 @@
     <h3>
          Product Details 
     </h3>
+    <strong>Total Rows {{total_row}}  Marked Rows {{mark_count}}  Un-mark Rows{{uumark_count}} </strong>
     <div *ngFor="let prod of products;let i=index">
 
             {{prod.pid}} {{ prod.pname }} {{prod.price}}
-            <button>Edit</button> <button (click)="delRow(i)">Del</button>
+            <button>Edit</button> 
+            <button (click)="delRow(i)">Del</button>
+            <button (click)="markRow(i)" [innerHTML]="getMarkStatus(i)"></button>
+
 
     </div>
     

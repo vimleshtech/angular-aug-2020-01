@@ -20,6 +20,12 @@ export class AddproductComponent implements OnInit {
 
   isadmin=false
 
+
+  //
+  total_row = 0
+  mark_count = 0
+  uumark_count = 0
+
   constructor() { }
 
   ngOnInit(): void {
@@ -31,18 +37,45 @@ export class AddproductComponent implements OnInit {
 
   }
   createProduct(){
-    this.products.push({pid:this.pid,pname:this.pname,price:this.pprice})
+    this.products.push({pid:this.pid,pname:this.pname,price:this.pprice,ismark:false})
     console.log(this.products)
+    this.summary()
   }
   delRow(i){
     //alert(i)
     //splice() method which will remove item from array
     this.products.splice(i,1) //remove one element from given index 
-    
+    this.summary()
   }
 
   getStatus(){
     return true;
 
   }
+
+  markRow(i){
+      console.log(i);
+      this.products[i].ismark  = !this.products[i].ismark 
+
+      console.log(this.products)
+      this.summary()
+  } 
+
+  summary(){
+
+    this.total_row = this.products.length;
+    this.mark_count = this.products.filter(row=>row.ismark==true).length;
+    this.uumark_count = this.products.filter(row=>row.ismark==false).length;
+    console.log(this.total_row)    
+    console.log(this.mark_count)    
+    console.log(this.uumark_count)    
+
+
+  }
+  getMarkStatus(i){
+    
+    return this.products[i].ismark==true? "Unmark" : "Mark";
+
+  }
+
 }

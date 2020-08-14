@@ -1,0 +1,23 @@
+
+<div>
+    <h2>User Details </h2>
+    <p>
+        <input 
+        [style.color]="status == 'error'? 'red' : 'blue'"         
+        placeholder="enter user id" />
+
+        <input [ngStyle]="{'color': 'red'}" placeholder="enter user id" />
+
+    </p>
+    <p>
+        <!-- "red" red will be considered as variable -->
+        <!-- "'red'"  red is considered as str -->
+        <input [style.color]="'red'"  placeholder="enter user name"/>
+        
+    </p>
+    <p>
+        <input type="button" [style.background-color]="'blue'" value="Add User  " />
+    </p>
+
+
+</div>
