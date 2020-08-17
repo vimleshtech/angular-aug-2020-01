@@ -1,0 +1,20 @@
+<div>
+<h1>Parent Component</h1>
+<p>
+    <input type="text" placeholder="enter name " [(ngModel)]="name"/>
+</p>
+<p>
+    <input type="text" placeholder="enter salary " [(ngModel)]="salary"/>
+</p>
+
+<p>
+    <button (click)="addItem()">Add Item</button>
+</p>
+<h3>
+    Data from Child {{description}}
+</h3>
+
+<!-- userDetails is key attributae(custom attribute), and items is variable which declared in parent.ts file -->
+<app-child [userDetails]="items" (eventEmitter)="receoveData($event)"></app-child>
+
+</div>

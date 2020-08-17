@@ -1,0 +1,14 @@
+<div>
+    <h1>Child Component - Data From Parent</h1>
+    <p *ngFor="let item of userDetails">
+            {{item.name}} | {{item.salary}}
+    </p>
+
+    <h2> Child Form </h2>
+    <p>
+        <input type="text" placeholder="desciption" [(ngModel)]="desc" />
+    </p>
+    <p>
+        <button (click)="addDescription()">Add Description</button>
+    </p>
+</div>

@@ -10,9 +10,11 @@ import { FooterComponent } from './footer/footer.component';
 import { TaskComponent } from './task/task.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { UserComponent } from './user/user.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent,FooterComponent,TaskComponent,AddproductComponent, UserComponent
+  declarations: [AppComponent,HeaderComponent,FooterComponent,TaskComponent,AddproductComponent, UserComponent, ParentComponent, ChildComponent
   ],
   imports: [BrowserModule,AppRoutingModule ,FormsModule  ],
   providers: [],

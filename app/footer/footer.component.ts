@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from '../common.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  message:string
+  text:string
+  constructor(private objService:CommonService) { }
 
   ngOnInit(): void {
+    this.objService.sharedMessage.subscribe(txt=>this.message=txt);
+
+  }
+
+  setMessage(){
+      this.objService.getMessage(this.text)
   }
 
 }

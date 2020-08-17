@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from '../common.service';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,18 @@ export class HeaderComponent implements OnInit {
 
   name:string="Raman"
 
-  constructor() { }
+
+  message:string
+
+  constructor(private objService: CommonService) { }
 
   setName(){
     this.name  ="test name"
   }
   ngOnInit(): void {
+
+    this.objService.sharedMessage.subscribe(txt => this.message = txt);
+
   }
 
 }
