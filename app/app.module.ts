@@ -12,9 +12,12 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { UserComponent } from './user/user.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { TotalPipe } from './total.pipe';
+import { SortingPipe } from './sorting.pipe';
+import { MystyleDirective } from './mystyle.directive';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent,FooterComponent,TaskComponent,AddproductComponent, UserComponent, ParentComponent, ChildComponent
+  declarations: [AppComponent,HeaderComponent,FooterComponent,TaskComponent,AddproductComponent, UserComponent, ParentComponent, ChildComponent, TotalPipe, SortingPipe, MystyleDirective
   ],
   imports: [BrowserModule,AppRoutingModule ,FormsModule  ],
   providers: [],

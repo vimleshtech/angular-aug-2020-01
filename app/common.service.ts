@@ -7,11 +7,13 @@ import {BehaviorSubject} from 'rxjs';
 export class CommonService {
 
   private message = new BehaviorSubject('Default Message');
-  sharedMessage = this.message.asObservable();
+  sharedMessage = this.message.asObservable()
 
   constructor() { }
 
   getMessage(message: string){
+
     this.message.next(message)
+    
   }
 }

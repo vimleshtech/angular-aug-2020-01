@@ -23,4 +23,14 @@
 <!-- <app-user></app-user> -->
 <!-- <app-task></app-task> -->
 <app-footer></app-footer>
+<h1 appMystyle> Pipe Example </h1>
+<div>
+    <p> {{ text}} </p>
+    <!-- upppercase('text') -->
+    <p> {{ text | uppercase }} </p>   
+    <p> {{ text | lowercase }} </p>
 
+    <p> {{  data | total}}</p>
+    <p> {{ names | sorting:'asc'}} </p>
+    <p appMystyle> {{ names | sorting:'desc'}} </p>
+</div>

@@ -4,5 +4,8 @@
     <input type="text" [(ngModel)]="text" />
     <button (click)="setMessage()">Add Text</button>
 
+    <p> {{ text }}</p>
+    <p> {{ names | sorting:'asc'}} </p>
+
 </div>
 

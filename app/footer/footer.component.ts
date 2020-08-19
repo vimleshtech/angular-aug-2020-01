@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {CommonService} from '../common.service';
 
 @Component({
@@ -8,16 +9,17 @@ import {CommonService} from '../common.service';
 })
 export class FooterComponent implements OnInit {
 
-  message:string
   text:string
+
+  names=['jatin','aman']
   constructor(private objService:CommonService) { }
 
   ngOnInit(): void {
-    this.objService.sharedMessage.subscribe(txt=>this.message=txt);
 
   }
 
   setMessage(){
+
       this.objService.getMessage(this.text)
   }
 
