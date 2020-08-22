@@ -9,7 +9,8 @@ export class MystyleDirective {
 
       obj.nativeElement.style.color="red";
       obj.nativeElement.style.backgroundColor="orange";
-
+      obj.nativeElement.innerHTML="<input type='text' />"
+      obj.nativeElement.innerHTML+="<input type='button'  value='Add'/>"
 
 
   }

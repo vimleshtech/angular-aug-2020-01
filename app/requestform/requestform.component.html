@@ -1,0 +1,45 @@
+<div>
+    <h2> Contact Request </h2>
+    <form [formGroup]="contactForm">
+
+            <div formGroupName="personalData">
+
+                    <input type="text" placeholder="enter name"
+                    formControlName="name" />
+
+                    <input type="text" placeholder="enter email"
+                    formControlName="email" />
+                    
+                    <input type="text" placeholder="enter phone"
+                    formControlName="phone" />
+
+                    <select formControlName="country">
+
+                        <option *ngFor="let country of counteries" [value]="country">
+                            {{country}}
+                        </option>
+                    </select>
+
+                    <select formControlName="city">
+
+                        <option *ngFor="let city of cities" [value]="city">
+                            {{city}}
+                        </option>
+                    </select>
+                    
+            </div>
+            
+            
+            <select formControlName="requestType">
+
+                <option *ngFor="let req of requestTypes" [value]="req">
+                    {{req}}
+                </option>
+            </select>
+            <input type="text" placeholder="enter comments " formControlName="comments">
+
+    </form>
+
+    {{contactForm.value | json}}
+    
+</div>

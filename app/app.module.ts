@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,11 +16,28 @@ import { TotalPipe } from './total.pipe';
 import { SortingPipe } from './sorting.pipe';
 import { MystyleDirective } from './mystyle.directive';
 
+import {ProductModel} from './models/product.model';
+
+import { ModelexComponent } from './modelex/modelex.component';
+
+import { ContactComponent } from './contact/contact.component';
+import { RequestformComponent } from './requestform/requestform.component';
+
+
+/*
+declarations: Component, Pipe, Directive 
+imports: modules / library/ class
+providers: services, model 
+bootstrap:  landing component/ first component 
+*/
+
 @NgModule({
-  declarations: [AppComponent,HeaderComponent,FooterComponent,TaskComponent,AddproductComponent, UserComponent, ParentComponent, ChildComponent, TotalPipe, SortingPipe, MystyleDirective
+  declarations: [AppComponent,HeaderComponent,FooterComponent,TaskComponent,AddproductComponent, UserComponent, ParentComponent, ChildComponent, TotalPipe, SortingPipe, MystyleDirective, ModelexComponent,
+    ContactComponent,
+    RequestformComponent
   ],
-  imports: [BrowserModule,AppRoutingModule ,FormsModule  ],
-  providers: [],
+  imports: [BrowserModule,AppRoutingModule ,FormsModule  ,ReactiveFormsModule],
+  providers: [ProductModel],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

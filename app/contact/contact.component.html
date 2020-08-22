@@ -1,0 +1,36 @@
+
+<div>
+
+    <h1> Contact Form </h1>
+    <form [formGroup]="contactForm" >
+            <p>
+                <input type="text" placeholder="Enter fname" 
+                formControlName="fname" />
+            </p>
+            <p>
+                <input type="text" placeholder="Enter lname" 
+                formControlName="lname" />
+            </p>
+            <p>
+                <input type="text" placeholder="Enter email" 
+                formControlName="email" />
+            </p>
+            <p>
+                <input type="text" placeholder="Enter gender" 
+                formControlName="gender" />
+            </p>
+            <p>
+                <button (click)="onSubmit()" type="submit"> Add Contact Details  </button>
+
+            </p>
+
+
+
+    </form>
+
+    <h3>
+        {{contactForm.value | json }}
+
+    </h3>
+</div>
+

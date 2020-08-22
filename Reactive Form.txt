@@ -1,0 +1,23 @@
+Form:
+	Input  
+		(input)="function($event)"
+	
+	Template:
+		ngModel	
+		ReactiveForm
+
+ReactiveForm:
+	Step 1:  import ReactiveFormsModule in app.module.ts
+		
+		import {ReactiveFormsModule} from '@angular/forms';
+
+	Step 2:	Create new component 
+		ng g c <component_name>	
+	
+	Step 3: Import forms 
+		import {FormBuilder,FormControl,FormGroup} from '@angular/forms';
+		
+	
+	Step 4: Create an object of FormGroup
+		
+		 	
