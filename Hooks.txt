@@ -1,0 +1,27 @@
+Component Life-Cyle/Event-Hooks
+===================================
+ - life cycle is difference phases of applications
+	Example:  start   event  ..end 
+
+There are following hooks(event/predefined functions):
+	constructor() 1				- is method which invoke one time when object will be created or component will be loaded 
+						new Component() 
+	ngOnChanges()				- is method which invoke everytime when any data will be changed
+	ngOnInit()	1			- Invoked when given component has been initialized 
+					
+	ngDoCheck()				- Invoked when the chagne detecter of the given component is invoked 
+				**note: ngDoCheck and ngOnChanges shouldn't be implemented together in a same component
+		ngAfterContentInit()		- Invoked after angular performs any content projection into the component's view
+		ngAfterContentChecked()		- Invoked every time when given content of compoent has been checked by the change decter 
+		ngAfterViewInit()		- (afer ngOnInit) Invoked when the component's view has been fully initialized 
+		ngAfterViewChecked()		- (after ngDoCheck) Invoked every time when given component has been checked by the chage detection
+	ngOnDestroy()				- Invoked just before angular destory the component 
+							(unload)
+		
+	
+
+	
+	
+
+
+

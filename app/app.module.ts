@@ -22,6 +22,8 @@ import { ModelexComponent } from './modelex/modelex.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { RequestformComponent } from './requestform/requestform.component';
+import { LifeComponent } from './life/life.component';
+import { CycleComponent } from './cycle/cycle.component';
 
 
 /*
@@ -34,7 +36,9 @@ bootstrap:  landing component/ first component
 @NgModule({
   declarations: [AppComponent,HeaderComponent,FooterComponent,TaskComponent,AddproductComponent, UserComponent, ParentComponent, ChildComponent, TotalPipe, SortingPipe, MystyleDirective, ModelexComponent,
     ContactComponent,
-    RequestformComponent
+    RequestformComponent,
+    LifeComponent,
+    CycleComponent
   ],
   imports: [BrowserModule,AppRoutingModule ,FormsModule  ,ReactiveFormsModule],
   providers: [ProductModel],
