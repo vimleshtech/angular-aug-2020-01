@@ -1,0 +1,61 @@
+<p>Reactive Form with valdiation!</p>
+<div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                <div>
+                    <label> First Name </label>
+                    <input type="text" formControlName="fname" />
+
+                    <div *ngIf="submited && f.fname.errors">
+                                <div *ngIf="f.fname.errors.required">
+                                        First is required field
+                                </div>
+                                
+
+
+                    </div>
+
+                </div>
+                <div>
+                    <label> Last Name </label>
+                    <input type="text" formControlName="lname" />
+
+                    
+                    <div *ngIf="submited && f.lname.errors">
+                        <div *ngIf="f.lname.errors.required" style="color:red;">
+                                last is required field
+                        </div>
+                        <div *ngIf="f.lname.errors.minlength">
+                            lname name len should be 3 chars 
+                    </div>
+
+
+            </div>
+
+                </div>
+
+                <div>
+                    <label> Email Id </label>
+                    <input type="text" formControlName="email" />
+
+                    
+                    <div *ngIf="submited && f.email.errors">
+                        <div *ngIf="f.email.errors.email">
+                                Email is not in correct format
+                        </div>
+
+            </div>
+
+                </div>
+                
+                <div>
+                    <label> Password </label>
+                    <input type="text" formControlName="password" />
+                </div>
+                
+                <div>
+
+                        <button > Register </button>
+                </div>          
+        </form>
+</div>

@@ -24,6 +24,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RequestformComponent } from './requestform/requestform.component';
 import { LifeComponent } from './life/life.component';
 import { CycleComponent } from './cycle/cycle.component';
+import { ValidationComponent } from './validation/validation.component';
 
 
 /*
@@ -38,7 +39,8 @@ bootstrap:  landing component/ first component
     ContactComponent,
     RequestformComponent,
     LifeComponent,
-    CycleComponent
+    CycleComponent,
+    ValidationComponent
   ],
   imports: [BrowserModule,AppRoutingModule ,FormsModule  ,ReactiveFormsModule],
   providers: [ProductModel],
