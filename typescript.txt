@@ -1,0 +1,15 @@
+Type-script
+========================
+tsc : is typescript compiler which convert .ts file .js file
+
+
+TS Programing Fundamentals
+=======================================
+Declaration of variable:
+	let		: block level scope, within {}
+	var		: function level scope or can be global if delcare within class or file 
+	const		: readonly, once declare we cannot reset or change value 
+
+
+	
+	
