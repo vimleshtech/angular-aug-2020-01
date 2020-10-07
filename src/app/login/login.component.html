@@ -1,0 +1,36 @@
+<style>
+    .team{
+      border-right: 2px solid white;
+      font-size: 15px;;
+      padding:5px;
+      color:white;
+    }
+  </style>
+<p>Sub Menu works!</p>
+<div>
+    <span class="team"> 
+        <a style="color:darkblue;" routerLink="about">About</a>   
+      </span>  
+      <span class="team"> 
+        <a style="color:darkblue;" routerLink="product">Product</a>     
+      </span> 
+  
+      <span class="team"> 
+        <a style="color:darkblue;" routerLink="terms">Terms</a>     
+      </span> 
+
+      
+    <!-- <p>
+        <input type="text" placeholder="enter email" />
+    </p>
+    <p>
+
+        <input type="text" placeholder="enter password" />
+    </p>
+    <p>
+        <input type="button" value="Login" (click)="login()"/>
+     </p> -->
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

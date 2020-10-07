@@ -1,0 +1,15 @@
+<p>dashboard works!</p>
+
+<div *ngFor="let item of items; let i = index">
+
+      {{item.id}}   {{item.name}} {{item.gender}}
+
+      <a style="color:darkblue;" [routerLink]="['/product-item',item.id]">View More</a>   
+    
+       <!-- <a style="color:darkblue;" [routerLink]="['/dashboard/product-item',item.id]">View More</a>    -->
+
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

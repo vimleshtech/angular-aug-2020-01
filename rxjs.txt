@@ -1,0 +1,143 @@
+RxJS:
+	 to create observable data streams and some data features
+		-asynchronus programing 
+		-filtering stream
+		-composting multiple streams
+		-mapping values to different types 
+		-converting existing code for async operation into observables 	
+	 Inbuilt methods or function of rxjs
+		interval()
+					import {interval} from 'rxjs';	
+				
+					const coutner = interval(2000) //will publish the value on an interval
+					
+					subscription_data = counter.subscribe(d=> console.log(d);)
+		
+		subscribe()
+				
+		ajax()
+					import {ajax} from 'rxjs';
+
+					//create an observable that will create an ajax request
+					const  apidata  = ajax('data/api')
+
+					apidata.subscribe(d => console.log(d.status,d.response));
+				
+
+		Operators
+
+			of()
+					import {of}  from 'rxjs';
+					const data  = of(5666,333,66,36,77333); //create collection(data)
+			pipe()
+				pipe(				//pipe will combile multiple function 	
+					funct1(),
+					funct2()
+	
+				)
+
+			filter()
+					import {of}  from 'rxjs';
+					import {map,filter} from 'rxjs';	
+
+					const data  = of(5666,333,66,36,77333);
+					const res = pipe(					
+						filter((n:number) => n%2 >0),
+						map(n=> n*n)
+					);
+					
+					//or 
+					const data  = of(5666,333,66,36,77333)
+						.pipe(
+							filter((n:number) => n%2 >0),
+							map(n=> n*n)
+						);
+
+					//
+
+					cosnt resultOdd = res(data);
+					resultOdd.subscribe(x=> console.log(x));			
+										
+
+			map()
+					import {of}  from 'rxjs';
+					import {map} from 'rxjs';
+					
+					const data  = of(5666,333,66,36,77333);
+					//iterate each value and do some calculation 
+					const res = map((x:number)=> x+.18); //compute 18% tax
+					const result = res(data) /// (5666*.18,333*.18,66*.18,36*.18,77333*.18);
+
+					
+					result.subscribe(x=> cossole.log(x));		
+
+					
+
+			flatMap()
+				flatMap(d=> console.log(d))	
+				map((d,i)=> console.log(i,d))
+				
+			concat()
+				concat(
+					of(11,33,5),
+					of(66,33,)
+				)
+
+		Error or Exception handling:
+				
+			import {of} from 'rxjs';
+			import {ajax} from 'rxjs/ajax';	
+			import {map,catchError} from  'rxjs/operators';
+		
+
+			const data = ajax('data/api').pipe(
+
+					map((res:any) =>{
+							if(!res.response){
+								throw new Error('data was expected ');	
+							}
+							return res.response;
+					}),
+					catchError(err => of([]))
+				);			
+			
+	
+			data.subscribe(d=> console.log(d/10))
+			
+			
+			//or
+			data.subscribe(  {
+					next(x){conso.log(x)},
+					catchError(err){ console.log(err)}
+				})
+			
+			data  = [11,33,5,677]
+			i = data.iterator()
+			while(i.next())
+			{
+
+			}
+		
+
+		retry failure:
+
+			const data = ajax('data/api').pipe(
+
+					map((res:any) =>{
+							if(!res.response){
+								throw new Error('data was expected ');	
+							}
+							return res.response;
+					}),
+					retry(5),
+					catchError(err => of([]))
+				);			
+			
+			
+		obserables
+			 import {Observable} from 'rxjs';
+			
+			cosnt data = Observable<data...>	
+			
+			data.subscribe(d => {})
+			

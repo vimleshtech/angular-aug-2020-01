@@ -1,0 +1,35 @@
+<style>
+  .team{
+    border-right: 2px solid white;
+    font-size: 15px;;
+    padding:5px;
+    color:white;
+  }
+</style>
+<div>
+  <h1>
+    Routing and Navigation - Example 
+  </h1>
+  <div style="background-color: darkblue;color:white;font-size: 17px;
+  color:white;
+  min-height: 30px;;">
+    <span class="team">
+      <a style="color:whitesmoke;" routerLink="home">Home</a>   
+    </span>  
+    <span class="team">
+      <a style="color:whitesmoke;" routerLink="dashboard">Dashboard</a>   
+    </span>  
+    
+    <span class="team"> 
+      <a style="color:whitesmoke;" routerLink="login">Submenu</a>   
+     </span> 
+    <span class="team"> 
+      <a style="color:whitesmoke;" routerLink="register">Register</a>     
+    </span> 
+
+
+  </div>
+  <div>
+      <router-outlet></router-outlet>
+  </div>
+</div>
